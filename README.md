@@ -1,43 +1,34 @@
 PDF Visual Comparison Tool
 ==========================
-
-This script compares PDF files visually by converting each page into images and then comparing them using OpenCV. It's particularly useful for identifying differences between PDF files that may not be apparent through text comparison alone.
+This utility compares PDF files visually by converting each page into images and then comparing them using OpenCV.
+It's particularly useful for identifying differences between PDF files that may not be apparent through text comparison alone.
 
 Features
 --------
-
 *   Compares PDF files visually, page by page.
 *   Supports multi-page PDF files.
 *   Reports differences between PDF files, specifying the page number and source file.
 
 Requirements
 ------------
-
 *   Python 3.x
 *   PyMuPDF (`fitz`) library
 *   OpenCV (`cv2`) library
-*   NumPy (`numpy`) library
 
 Installation
 ------------
-
 1.  Clone the repository:
     
-    bashCopy code
+    `git clone https://github.com/Formartha/compare-pdf.git`
     
-    `git clone https://github.com/your_username/pdf-visual-comparison.git`
-    
+
 2.  Install the required dependencies:
     
-    bashCopy code
-    
-    `pip install -r requirements.txt`
+    `pip install pymupdf opencv-python`
     
 
 Usage
 -----
-
-bashCopy code
 
 `python compare_pdf.py --pdf <path_to_pdf1> --pdf <path_to_pdf2> ...`
 
@@ -55,6 +46,5 @@ This will compare `file1.pdf` and `file2.pdf` visually, reporting any difference
 
 License
 -------
-
 This project is licensed under the MIT License - see the LICENSE file for details.
 

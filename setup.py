@@ -9,7 +9,7 @@ setup(
     author_email='morpci@gmail.com.com',
     packages=find_packages(),
     install_requires=[
-        'pdf2image',
+        'pymupdf',
         'opencv-python',
     ],
     entry_points={
