@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='compare_pdf',
-    version='0.1',
+    version='0.2',
     description='A simple package to visually compare PDF files',
     long_description=long_description,
     long_description_content_type="text/markdown",
