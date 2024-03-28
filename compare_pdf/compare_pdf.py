@@ -65,10 +65,14 @@ class ComparePDF:
                             f"Image {i + 1} from {self.pdf_paths[i]} is different from Image {j + 1} from {self.pdf_paths[j]} on Page {page_num}")
 
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser(description='Compare PDF files visually')
     parser.add_argument('--pdf', action='append', required=True, help='Path to the PDF file')
     args = parser.parse_args()
 
     compare = ComparePDF(args.pdf)
     compare.compare()
+
+
+if __name__ == "__main__":
+    main()

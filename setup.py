@@ -13,12 +13,12 @@ setup(
     author_email='morpci@gmail.com',
     packages=find_packages(),
     install_requires=[
-        'pymupdf',
+        'PyMuPDF',
         'opencv-python',
     ],
     entry_points={
         'console_scripts': [
-            'compare_pdf=compare_pdf:ComparePDF',
+            'compare_pdf=compare_pdf.compare_pdf:main',
         ],
     },
 )

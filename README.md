@@ -30,16 +30,16 @@ Installation
 Usage
 -----
 
-`python compare_pdf.py --pdf <path_to_pdf1> --pdf <path_to_pdf2> ...`
+`compare_pdf --pdf <path_to_pdf1> --pdf <path_to_pdf2> ...`
 
 *   Replace `<path_to_pdf1>`, `<path_to_pdf2>`, etc. with the paths to the PDF files you want to compare.
 *   At least two PDF files are required for comparison.
 
 Example
 -------
-`python compare_pdf.py --pdf file1.pdf --pdf file2.pdf`
+`compare_pdf --pdf file1.pdf --pdf file2.pdf`
 
-This will compare `file1.pdf` and `file2.pdf` visually, reporting any differences found.
+This will compare `full/path/to/file1.pdf` and `full/path/to/file2.pdf` visually, reporting any differences found.
 
 License
 -------
