@@ -37,9 +37,6 @@ Usage
 
 Example
 -------
-
-bashCopy code
-
 `python compare_pdf.py --pdf file1.pdf --pdf file2.pdf`
 
 This will compare `file1.pdf` and `file2.pdf` visually, reporting any differences found.
