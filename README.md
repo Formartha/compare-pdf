@@ -15,7 +15,7 @@ Requirements
 *   PyMuPDF (`fitz`) library
 *   OpenCV (`cv2`) library
 
-Installation
+Installation for local development
 ------------
 1.  Clone the repository:
     
@@ -26,6 +26,10 @@ Installation
     
     `pip install pymupdf opencv-python`
     
+
+Installation for self usage
+------------
+`pip install compare-pdf`
 
 Usage
 -----
