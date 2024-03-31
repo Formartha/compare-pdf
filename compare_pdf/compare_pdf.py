@@ -41,10 +41,18 @@ class ComparePDF:
     def _convert_to_opencv(self, pdf_page, dpi=72):
         pix = pdf_page.get_pixmap(alpha=False, dpi=dpi)
         img = np.frombuffer(pix.samples, np.uint8).reshape((pix.height, pix.width, pix.n))
+
         if pix.n == 4:
-            img = cv2.cvtColor(img, cv2.COLOR_BGRA2BGR)
+            img = cv2.cvtColor(img, cv2.COLOR_BGRA2BGR)  # Convert RGBA to BGR
         elif pix.n == 3:
-            img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+            img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)  # Convert RGB to BGR
+        elif pix.n == 1:
+            img = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)  # Convert grayscale to BGR
+        elif pix.n == 2:
+            # Handle indexed color image
+            indexed_img = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)  # Convert indexed color to BGR
+            img = indexed_img
+
         return img
 
     def _display_image(self, image, page_num):
