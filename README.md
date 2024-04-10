@@ -1,7 +1,7 @@
 ------
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/license/mit)
-![PyPI](https://img.shields.io/pypi/v/PACKAGE?label=compare-pdf)
+![PyPI](https://img.shields.io/pypi/v/compare-pdf)
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/compare-pdf)
 
 PDF Visual Comparison Tool
