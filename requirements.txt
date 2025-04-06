@@ -118,4 +118,3 @@ urllib3==2.3.0
 PyMuPDF==1.25.5
 setuptools==75.8.0
 wheel==0.45.1
-windows-curses==2.4.1

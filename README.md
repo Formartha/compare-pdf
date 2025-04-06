@@ -7,7 +7,7 @@
 PDF Visual Comparison Tool
 ==========================
 This utility compares PDF files visually by converting each page into images and then comparing them using OpenCV.
-It's particularly useful for identifying differences between PDF files that may not be apparent through text comparison alone.
+It is particularly useful for identifying differences between PDF files that may not be apparent through text comparison alone.
 
 Features
 --------
@@ -20,6 +20,8 @@ Requirements
 *   Python 3.x
 *   PyMuPDF (`fitz`) library
 *   OpenCV (`cv2`) library
+
+For detailed requirements, see below.
 
 Installation for local development
 ------------
@@ -39,11 +41,16 @@ Installation for self usage
 
 Usage
 -----
+```
+compare_pdf --pdf <path_to_pdf1> --pdf <path_to_pdf2> ... [--showdiffs={sidebyside|diffimage}]
+```
 
-`compare_pdf --pdf <path_to_pdf1> --pdf <path_to_pdf2> ...`
+* Replace `<path_to_pdf1>`, `<path_to_pdf2>`, etc. with the paths to the PDF files you want to compare. At least two PDF files are required for comparison.
+* The `--showdiffs` option requests the display of differing pages in a window as they are discovered. A diff window is dismissed by typing any character and the processing continues
+    * _sidebyside_ places the differing pdf pages horizontally next to each other in the diff window
+    * _diffimage_ places an OpenCV absdiff result in the diff window, a white background with non-white pixels showing where the images differed.
 
-*   Replace `<path_to_pdf1>`, `<path_to_pdf2>`, etc. with the paths to the PDF files you want to compare.
-*   At least two PDF files are required for comparison.
+The program returns a zero result code when there are no differences, otherwise -1
 
 Example
 -------
@@ -51,7 +58,26 @@ Example
 
 This will compare `full/path/to/file1.pdf` and `full/path/to/file2.pdf` visually, reporting any differences found.
 
+Requirements.txt
+----------------
+The _requirements.txt_ file specifying exactly which modules are needed in a virtual environenment was generated using the commands below
+```
+pip3 install pipreqs
+pip3 install pip-tools
+pipreqs --savepath=requirements.in && pip-compile
+```
+The result was not perfect, however, so that manual additions were needed:
+```
+PyMuPDF==1.25.5
+setuptools==75.8.0
+wheel==0.45.1
+```
+
 License
 -------
 This project is licensed under the MIT License - see the LICENSE file for details.
 
+Useful references
+-----------------
+* https://stackoverflow.com/questions/31684375/automatically-create-file-requirements-txt/65728461#65728461
+* https://codedeepai.com/finding-difference-between-multiple-images-using-opencv-and-python/
